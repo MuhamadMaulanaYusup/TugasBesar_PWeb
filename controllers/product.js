@@ -1,4 +1,6 @@
+// require hela ka models product
 const Product = require('../models/product');
+
 module.exports.postProduct = (req, res) => {
 	Product.create({
 		name: req.body.name,
