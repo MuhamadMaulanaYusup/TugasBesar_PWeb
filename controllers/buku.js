@@ -4,11 +4,11 @@ const Buku = require('../models/buku');
 module.exports.postBuku = (req, res) => {
 	Buku.create({
 		judul: req.body.judul,
-		id_kategori: req.body.id_kategori,
 		pengarang: req.body.pengarang,
 		penerbit: req.body.penerbit,
 		jumlah: req.body.jumlah,
-		harga: req.body.harga
+		harga: req.body.harga,
+		kategoriId: req.body.kategoriId
 	}).then((buku) => {
 		res.json(buku);
 	}).catch((error) => {
@@ -27,11 +27,11 @@ module.exports.getBuku = (req, res) => {
 module.exports.putBuku = (req, res) => {
 	Buku.update({
 		judul: req.body.judul,
-		id_kategori: req.body.id_kategori,
 		pengarang: req.body.pengarang,
 		penerbit: req.body.penerbit,
 		jumlah: req.body.jumlah,
-		harga: req.body.harga
+		harga: req.body.harga,
+		kategoriId: req.body.kategoriId
 	}, {where:{id: req.params.id
 	}}).then((buku) => {
 		res.json(buku);
