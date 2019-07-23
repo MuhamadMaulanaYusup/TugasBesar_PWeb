@@ -4,7 +4,12 @@ const router = express.Router();
 
 const keranjangController = require('../controllers/keranjang');
 
+const auth = require('../configs/auth');
+
 router.get('/', keranjangController.getKeranjang);
-router.post('/',auth.verifyToken, keranjangController.postAddBuku);
+
+router.get('/buku', auth.verifyToken, keranjangController.getBuku);
+
+router.post('/orderBuku', auth.verifyToken, keranjangController.postOrderBuku);
 
 module.exports = router;

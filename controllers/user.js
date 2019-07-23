@@ -4,7 +4,17 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const User = require('../models/user');
+const Keranjang = require('../models/keranjang');
 
+module.exports.getUser = (req, res) => {
+	User.findAll()
+		.then((user)=>{
+			res.json(user);
+		})
+		.catch((error) => {
+			console.log(error);
+	})
+}
 module.exports.postRegister = (req, res) => {
 	var salt = bcrypt.genSaltSync(10);
 	var hash = bcrypt.hashSync(req.body.password, salt);
@@ -43,7 +53,11 @@ module.exports.postLogin = (req, res) => {
 			};
 
 			if(isMatch) {
-				jwt.sign({ id: user.get('id')}, process.env.SECRETKEY, (error, token) => {
+				jwt.sign({ 
+					id: user.get('id'), 
+					username: user.get('username'), 
+					roles: user.get('roles')
+					}, process.env.SECRETKEY, (error, token) => {
 					res.json({ token: token });
 				})
 			} else {
