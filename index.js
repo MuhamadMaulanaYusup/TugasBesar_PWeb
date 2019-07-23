@@ -30,7 +30,7 @@ app.use('/kategori', kategoriRouter);
 app.use('/user', userRouter);
 app.use('/keranjang', keranjangRouter);
 
-app.listen(3000, () => {
+app.listen(3107, () => {
     console.log('server started');
     sequelize.sync();
 })
