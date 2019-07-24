@@ -3,7 +3,6 @@ Tugas Besar Praktek Web 3
 
 Merupakan Program Node JS menggunakan framework Express JS
 
-Untuk List API file POSTMAN (tinggal di Import Saja di POSTMAN) 
 
 ## Anggota Kelompok :
 
@@ -77,7 +76,7 @@ Berikut merupakan List API Untuk User Perlu Login Terlebih Dahulu
 * penerbit
 * jumlah
 * harga
-* categoryId
+* kategoryId
 
 ### Update Buku
 ```url
@@ -90,7 +89,7 @@ Berikut merupakan List API Untuk User Perlu Login Terlebih Dahulu
 * penerbit
 * jumlah
 * harga
-* categoryId
+* kategoryId
 
 ### Hapus Buku
 ```url
@@ -111,16 +110,16 @@ Berikut merupakan List API Untuk User Perlu Login Terlebih Dahulu
 
 ### Tambah Kategori
 ```url
-159.89.194.18:3107/category
+159.89.194.18:3107/kategory
 ```
 #### Mehtod : POST
 #### Level : ADMIN
 #### Parameter : 
-* NamaCategory
+* Namakategory
 
-### Lihat Semua Category
+### Lihat Semua kategory
 ```url
-159.89.194.18:3107/category
+159.89.194.18:3107/kategory
 ```
 #### Mehtod : GET
 
