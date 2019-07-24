@@ -76,7 +76,8 @@ Berikut merupakan List API Untuk User Perlu Login Terlebih Dahulu
 * penerbit
 * jumlah
 * harga
-* kategoryId
+* kategoriId
+* note(data kategori harus ada data terlebih dahulu di databasenya)
 
 ### Update Buku
 ```url
@@ -89,7 +90,7 @@ Berikut merupakan List API Untuk User Perlu Login Terlebih Dahulu
 * penerbit
 * jumlah
 * harga
-* kategoryId
+* kategoriId
 
 ### Hapus Buku
 ```url
@@ -110,16 +111,24 @@ Berikut merupakan List API Untuk User Perlu Login Terlebih Dahulu
 
 ### Tambah Kategori
 ```url
-159.89.194.18:3107/kategory
+159.89.194.18:3107/kategori
 ```
 #### Mehtod : POST
-#### Level : ADMIN
 #### Parameter : 
-* Namakategory
+* nama_kategori
 
-### Lihat Semua kategory
+### Ubah Kategori
 ```url
-159.89.194.18:3107/kategory
+159.89.194.18:3107/kategori/:id
+```
+#### Mehtod : PUT
+#### Parameter : 
+* nama_kategori
+
+
+### Lihat Semua kategori
+```url
+159.89.194.18:3107/kategori
 ```
 #### Mehtod : GET
 
